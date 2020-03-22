@@ -22,9 +22,4 @@ export class NewsListComponent implements OnInit {
     })
   }
 
-
-
-  show(){
-    console.log(this.loadedNews);
-  }
 }

@@ -18,7 +18,7 @@ export class AuthService {
   }
 
   logIn( data: {username: string , password: string} ){
-    if (data.username ==='admin' && data.password==='123456' ){
+    if (data.username ==='admin' && data.password==='12345' ){
       localStorage.setItem('access','true')
       return true
     } else{
