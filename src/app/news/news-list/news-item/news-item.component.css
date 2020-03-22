@@ -1,0 +1,11 @@
+div{
+  background-color: azure;
+}
+
+.announce-img{
+  position: absolute;
+  top:0;
+  left:0;
+  max-width: 280px;
+
+}

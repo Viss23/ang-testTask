@@ -1,0 +1,30 @@
+<div class="container" >
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2 mt-3">
+      <form [formGroup]="signupForm" (ngSubmit)="submit()" >
+        <div formGroupName="userData">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              formControlName="username"
+              class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="password">password</label>
+            <input 
+              type="password"
+              id="password"
+              formControlName="password"
+              class="form-control">
+          </div>
+          <p *ngIf="!correctData && submitted"> The username or password you entered is incorrect</p>
+          <p *ngIf="correctData"> Correct data.Now you can visit profile page</p>
+          <button class="btn btn-success">Submit</button>
+          
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

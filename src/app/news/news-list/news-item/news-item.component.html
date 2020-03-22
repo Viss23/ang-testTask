@@ -1,0 +1,18 @@
+
+
+<hr>
+<div class="container justify-content-center">
+  <div class="row">
+    <div class="col-md-3">
+      <img class="announce-img" [src]="newsItem.urlToImage">
+    </div>
+    <div class="col-md-9">
+      <h2>{{newsItem.title}}</h2>
+      <p>{{newsItem.author}}   {{newsItem.publishedAt}}</p>
+      <p>{{newsItem.content}}</p>
+      <p><a [href]="newsItem.url">Read more here ...</a></p>
+    </div>
+  </div>
+  
+</div>
+<hr>
