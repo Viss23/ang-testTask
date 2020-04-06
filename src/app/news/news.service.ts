@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { map,pluck,tap, take } from 'rxjs/operators';
 
 import { News } from './news.model';
 import { Observable } from 'rxjs';
@@ -20,16 +20,9 @@ export class NewsService{
   }
 
   fetchNews(): Observable<News[]>{
-    return this.http.get(this.url)
-    .pipe(map(responseData =>{
-      let newsArray: News[] = [];
-      for (const key in responseData){
-        if (key==='articles'){
-        newsArray = responseData[key];
-      }
-    }
-    return newsArray
-    }))
+    return this.http.get(this.url).pipe(
+      pluck('articles')
+    )
   }
 
   getNews(){
